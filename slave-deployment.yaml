@@ -28,7 +28,7 @@ spec:
       - image: locustio/locust
         imagePullPolicy: Always
         name: worker
-        args: ["--worker", "--master-host=locust-master"]
+        args: ["--worker", "--master-host=locust-master","-f", "/home/locust/locustfile.py"]
         volumeMounts:
           - mountPath: /home/locust
             name: locust-scripts
