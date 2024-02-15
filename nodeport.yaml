@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: locust-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: locust-master
   ports:
